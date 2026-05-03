@@ -12,7 +12,7 @@ const EXCHANGE = 'car_events';
 @Module({
   imports: [
     RabbitMQModule.forRoot({
-      uri: '',
+      uri: process.env.RABBITMQ_URI,
       exchanges: [
         {
           name: EXCHANGE,
